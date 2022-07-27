@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penguin Fashion - Tailwind CSS</title>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "yellow": "#FA804C",
+            "dark-blue": "#363958",
+            "grey": "#3E3E3E"
+          },
+          backgroundImage: {
+            "blue": "linear-gradient(180deg, #3D4FF3 0%, #3543BC 100%)"
+          },
+          fontFamily: {
+            "sans": ["Roboto", "sans-serif"],
+            "bebas": ["Bebas Neue", "cursive"]
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- header section -->
+  <header class="px-4 md:px-12 lg:px-20  bg-[#FFF9F4]">
+    <nav class="flex items-center justify-between py-5">
+      <!-- logo -->
+      <div>
+        <img class="h-10 cursor-pointer" src="assets/icons/Logo.png" alt="Logo">
+      </div>
+      <!-- menu -->
+      <div>
+        <ul class="flex gap-x-10 font-medium hidden lg:inline-flex">
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 lg:hidden cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </div>
+    </nav>
+    <!-- banner -->
+    <div class="flex flex-col-reverse md:flex-row items-center justify-between py-12 md:py-20 gap-y-12">
+      <!-- banner title -->
+      <div class="flex flex-col space-y-5 text-center md:text-left items-center md:items-start">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-bebas"><span class="text-yellow block">Nike React</span><span class="text-dark-blue">Infinity Run 2</span></h1>
+        <p class="text-grey">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <button class="text-white px-8 py-4 bg-blue rounded-lg max-w-fit"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg> Buy Now</button>
+      </div>
+      <div>
+        <img src="assets/images/hero-banner.png" alt="Hero Banner">
+      </div>
+    </div>
+  </header>
+</body>
+</html>
